@@ -9,6 +9,7 @@
     <script src = "{% static '/js/bootstrap.min.js'%}"></script>
    <link href  = "{% static '/css/my_style_main.css'%}" rel = "stylesheet">
    <link href  = "{% static '/css/phones.css'%}" rel = "stylesheet">
+  
    
    <script src  = "{% static '/js/my_script.js'%}"></script>
    <script src  = "{% static '/js/bootstrap-formhelpers-phone.js'%}"></script>
@@ -140,20 +141,20 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-        <img src="/media/image/1.jpg" alt="">
+        <img src="{% static '/image/1.jpg'%}" alt="">
         
         <div class="item-box top left"></div>
         <div class="item-box top right"></div>
     </div>
       
       <div class="item">
-        <img src="/media/image/2iphones.jpg" alt="">
+        <img src="{% static '/image/2iphones.jpg'%}" alt="">
         
         <div class="item-box top left"></div>
         <div class="item-box top right"></div>
     </div>
       <div class="item">
-        <img src="/media/image/galaxy7.jpg" alt="">
+        <img src= "{% static '/image/galaxy7.jpg'%}" alt="">
         
         <div class="item-box top left"></div>
         <div class="item-box top right"></div>
