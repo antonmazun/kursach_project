@@ -1,0 +1,18 @@
+#content_image{
+    
+    height: 150px;
+}
+#block{
+    
+    height: 500px;
+}
+.col-sm-4{
+    
+    width: 300px;
+}
+
+#content_1{
+   position: relative;
+    left:5%;
+
+}

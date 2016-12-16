@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+{% block phone_one %}
+<div id = "phones_container">
+<div class = "phone_container"  >
+            <div class = "col-md-4 phone_container" >
+               
+                    <img src = "{{phone.image.url}}" alt = "iphone"  style = "height:250px;">
+                    <div class = "caption">
+                        <h3>Виробник: {{phone.title}}</h3>
+                        <p style="word-wrap:break-word;">Модель , опис: {{phone.desc}}</p>
+                            <p>Ціна $: {{phone.price}}</p>
+                            <p>Рейтинг:{{phone.rate}}</p>
+                            <p>Дата випуску:{{phone.date}}</p>
+                        
+                        <button class = "btn btn-info pull-right add" value = "{{phone.id}}">Додати в кошик</button>
+                    </div>
+                
+</div>
+
+<div class = "col-md-4 comments">
+
+    <h2 style = "font-style:oblique;" >Відгуки:</h2>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    {% for i in comments %}
+    <h4><b style = " color : blue; ">{{i.creator}}</b></h4>
+        <p style = "font-style:italic;">{{ i.comments }}</p>
+
+    {%endfor%}
+    {% if username%}
+<form class="form-post" role="form" method="post">
+<textarea class="form-control" rows="4" placeholder="Залиште відгук" required name="text"></textarea>
+    <button class="btn pull-right btn-success" type="submit">Відправити</button>
+</form>
+    {%endif%}
+</div>
+
+</div>
+</div>
+
+{%endblock%}
