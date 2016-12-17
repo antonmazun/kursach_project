@@ -76,6 +76,7 @@ class Phone(models.Model):
 
     def dict(self):
         return {
+            'id':self.id,
             'title': self.title,
             'desc': self.desc,
             'price': self.price,

@@ -30,7 +30,7 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^basicview/', include('blog.urls')),
-    url(r'^auth/', include('loginsys.urls')),
+    url(r'^auth/', include('loginsys.urls') ),
     url(r'^api/' , include('blog.api_urls')),
     #url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^', include('blog.urls')),
