@@ -20,7 +20,9 @@ def phones_view_api(request):
      error_api = "Error"
      if request.method == "POST" and request.POST['title'] and request.POST['desc'] and request.POST['price']  and request.POST['rate']:
 
-         f1 = Phone.objects.create(title=request.POST['title'],
+         f1 = Phone.objects.create(
+                              id = request.POST['id'],
+                              title=request.POST['title'],
                               desc=request.POST['desc'],
                               price=request.POST['price'],
                               rate=request.POST['rate'],
